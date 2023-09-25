@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practical7.css">
+    <title>Practical-7-21BCM025</title>
+</head>
+<body>
+    <h1>Reverse Digits of a Number</h1>
+    <form id="numberForm">
+        <label for="inNUm">Enter an integer: </label>
+        <input type="number" id="inNum" required>
+        <button type="button" onclick="reverse()">Reverse</button>
+        <p id="abc"></p>
+    </form>
+    
+    <p id="abc"></p>
+
+    <script>
+        function reverse() {
+            let result = 0
+            number = document.getElementById("inNum");
+            number = number.value;
+            while(number>0){
+            
+            right = number%10;
+            result = result*10 + right;
+            
+            number = Math.floor(number/10);
+            }
+            document.getElementById("abc").innerHTML= result;
+        }
+        
+    </script>
+
+    
+</body>
+</html>
